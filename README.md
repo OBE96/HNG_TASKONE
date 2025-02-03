@@ -57,7 +57,7 @@ Start the API using the following command:
 dotnet run    
 4. Access the API:
 
-The API will be available at https://hng-taskone-tq2i.onrender.com/api/classify_number .
+The API will be available at https://hngtaskone-qus2.onrender.com/api/classify-number .
 
 You can test the API using a browser, Postman, or any HTTP client.
 
@@ -65,7 +65,7 @@ You can test the API using a browser, Postman, or any HTTP client.
 # API DOCUMENTATION
 
 Endpoint
-- https://hng-taskone-tq2i.onrender.com/api/classify_number?number=371
+- https://hngtaskone-qus2.onrender.com/api/classify-number?number=371
 
 Request
 - No request body or parameters are required.
@@ -76,7 +76,7 @@ Response
 **Example Usage**
 
 Valid Input
-- Send a GET request to https://hng-taskone-tq2i.onrender.com/api/classify_number?number=371
+- Send a GET request to https://hngtaskone-qus2.onrender.com/api/classify-number?number=371
 
 Response Format:
 

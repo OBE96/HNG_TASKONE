@@ -18,6 +18,11 @@ namespace HNG_TASK1.Controllers
         [HttpGet]
         public async Task<IActionResult> GetNumberProperties([FromQuery] string number)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(new { error = true });
+            }
+
             if (!int.TryParse(number, out int parsedNumber))
             {
                 return BadRequest(new

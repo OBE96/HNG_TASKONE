@@ -41,11 +41,6 @@ namespace HNG_TASK1.Service
 
         public async Task<string> GetFunFact(int number)
         {
-            if (IsArmstrong(number))
-            {
-                string explanation = string.Join(" + ", number.ToString().Select(d => $"{d}^{number.ToString().Length}"));
-                return $"{number} is an Armstrong number because {explanation} = {number}";
-            }
             string fact = await GetFunFactFromApi(number);
 
             return fact;

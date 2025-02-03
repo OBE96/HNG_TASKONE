@@ -97,8 +97,8 @@ namespace HNG_TASK1.Controllers
             var response = new NumberPropertiesResponse
             {
                 number = parsedNumber,
-                is_Prime = IsPrime(parsedNumber),
-                is_Perfect = IsPerfect(parsedNumber),
+                is_prime = IsPrime(parsedNumber),
+                is_perfect = IsPerfect(parsedNumber),
                 digit_sum= DigitSum(parsedNumber),
                 fun_fact = await GetFunFact(parsedNumber)
             };

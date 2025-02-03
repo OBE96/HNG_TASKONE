@@ -60,3 +60,33 @@ dotnet run
 The API will be available at https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO .
 
 You can test the API using a browser, Postman, or any HTTP client.
+
+
+# API DOCUMENTATION
+
+Endpoint
+* https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO
+
+Request
+* No request body or parameters are required.
+
+Response
+* Status Code: 200 OK
+
+Response Format:
+
+json
+![h1](https://github.com/user-attachments/assets/9b634503-c132-409f-abda-45d1684f1028)
+
+Example Usage
+1. Send a GET request to https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO
+
+2.You will receive the following response:
+
+json
+![h1](https://github.com/user-attachments/assets/072a62e6-f202-42ca-86f2-78db43a1c47b)
+
+
+# BACKLINK
+https://hng.tech/hire/csharp-developers
+

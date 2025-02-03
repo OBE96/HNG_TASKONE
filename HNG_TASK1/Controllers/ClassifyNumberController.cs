@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HNG_TASK1.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/classify-number")]
     [ApiController]
-    public class classify_number : ControllerBase
+    public class ClassifyNumberController : ControllerBase
     {
         private readonly NumberService _numberService;
-        public classify_number()
+        public ClassifyNumberController()
         {
             _numberService = new NumberService();
         }

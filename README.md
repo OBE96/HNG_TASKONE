@@ -5,24 +5,24 @@ Description:
 
 A .NET Web API that takes a number as input and returns interesting mathematical properties about it, along with a fun fact.
 
-**Features
+**Features**
 
 Mathematical Properties:
 
-Checks if the number is prime.
+- Checks if the number is prime.
 
-Checks if the number is perfect.
+- Checks if the number is perfect.
 
-Checks if the number is an Armstrong number.
+- Checks if the number is an Armstrong number.
 
-Determines if the number is odd or even.
+- Determines if the number is odd or even.
 
-Calculates the sum of its digits.
+- Calculates the sum of its digits.
 
-Fun Fact:
+--- Fun Fact:
 
-Provides a fun fact about the number, especially if it is an Armstrong number.
+- Provides a fun fact about the number, especially if it is an Armstrong number.
 
-Error Handling:
+--- Error Handling:
 
-Returns a 400 Bad Request response for invalid inputs (e.g., non-numeric values).
+- Returns a 400 Bad Request response for invalid inputs (e.g., non-numeric values).

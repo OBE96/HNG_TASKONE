@@ -11,8 +11,11 @@ namespace HNG_TASK1.Controllers
         private static readonly HttpClient _httpClient = new HttpClient();
 
         // Helper methods for number classification
+        // Helper methods for number classification
         private bool IsPrime(int number)
         {
+            // Handle negative numbers by taking their absolute value
+            number = Math.Abs(number);
             if (number < 2)
                 return false;
             for (int i = 2; i <= Math.Sqrt(number); i++)
@@ -25,6 +28,8 @@ namespace HNG_TASK1.Controllers
 
         private bool IsPerfect(int number)
         {
+            // Handle negative numbers by taking their absolute value
+            number = Math.Abs(number);
             if (number < 2)
                 return false;
             int sum = Enumerable.Range(1, number - 1).Where(i => number % i == 0).Sum();
@@ -33,6 +38,8 @@ namespace HNG_TASK1.Controllers
 
         private bool IsArmstrong(int number)
         {
+            // Handle negative numbers by taking their absolute value
+            number = Math.Abs(number);
             string digits = number.ToString();
             int length = digits.Length;
             int sum = digits.Sum(d => (int)Math.Pow(int.Parse(d.ToString()), length));
@@ -41,6 +48,8 @@ namespace HNG_TASK1.Controllers
 
         private int DigitSum(int number)
         {
+            // Handle negative numbers by taking their absolute value
+            number = Math.Abs(number);
             return number.ToString().Sum(c => int.Parse(c.ToString()));
         }
 

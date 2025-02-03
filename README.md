@@ -28,7 +28,8 @@ Error Handling:
 - Returns a 400 Bad Request response for invalid inputs (e.g., non-numeric values).
 
 
-*CORS Support: The API is configured to allow requests from all origins by default. You can customize the CORS policy to restrict access to specific origins if needed.
+CORS Support: 
+- The API is configured to allow requests from all origins by default. You can customize the CORS policy to restrict access to specific origins if needed.
 
 # SETUP INSTRUCTION
 

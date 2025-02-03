@@ -16,7 +16,7 @@ namespace HNG_TASK1.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetNumberProperties([FromQuery] string number)
+        public async Task<IActionResult> GetNumberProperties([FromQuery] string number)
         {
             if (!int.TryParse(number, out int parsedNumber))
             {
@@ -33,7 +33,7 @@ namespace HNG_TASK1.Controllers
                 is_Prime = _numberService.IsPrime(parsedNumber),
                 is_Perfect = _numberService.IsPerfect(parsedNumber),
                 digit_sum= _numberService.DigitSum(parsedNumber),
-                fun_fact = _numberService.GetFunFact(parsedNumber)
+                fun_fact = await _numberService.GetFunFact(parsedNumber)
             };
 
             // Determine properties based on the new requirements

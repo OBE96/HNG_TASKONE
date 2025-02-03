@@ -1,7 +1,10 @@
-﻿namespace HNG_TASK1.Service
+﻿using System.Text.Json;
+
+namespace HNG_TASK1.Service
 {
     public class NumberService
     {
+        private static readonly HttpClient _httpClient = new HttpClient();
         public bool IsPrime(int number)
         {
             if (number < 2)
@@ -35,15 +38,55 @@
             return number.ToString().Sum(c => int.Parse(c.ToString()));
         }
 
-        public string GetFunFact(int number)
+
+        public async Task<string> GetFunFact(int number)
         {
             if (IsArmstrong(number))
             {
                 string explanation = string.Join(" + ", number.ToString().Select(d => $"{d}^{number.ToString().Length}"));
                 return $"{number} is an Armstrong number because {explanation} = {number}";
             }
-            return $"{number} is a fascinating number, but no specific fun fact is available.";
+            string fact = await GetFunFactFromApi(number);
+
+            return fact;
         }
-    
+
+        private async Task<string> GetFunFactFromApi(int number)
+        {
+            try
+            {
+                // Requesting fun fact from Numbers API (with math property)
+                string url = $"http://numbersapi.com/{number}/math?json=true";
+                HttpResponseMessage response = await _httpClient.GetAsync(url);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var factJson = await response.Content.ReadAsStringAsync();
+
+                    // Parse the JSON response safely using JsonDocument
+                    using (JsonDocument doc = JsonDocument.Parse(factJson))
+                    {
+                        // Check if the "text" property exists and return its value
+                        if (doc.RootElement.TryGetProperty("text", out var factElement))
+                        {
+                            return factElement.GetString();
+                        }
+                        else
+                        {
+                            return "No fun fact available.";
+                        }
+                    }
+                }
+                else
+                {
+                    return "No fun fact available.";
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"An error occurred while fetching the fact: {ex.Message}";
+            }
+        }
+
     }
 }

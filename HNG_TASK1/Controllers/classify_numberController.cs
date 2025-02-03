@@ -7,15 +7,15 @@ namespace HNG_TASK1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class NumberController : ControllerBase
+    public class classify_number : ControllerBase
     {
         private readonly NumberService _numberService;
-        public NumberController()
+        public classify_number()
         {
             _numberService = new NumberService();
         }
 
-        [HttpGet("properties")]
+        [HttpGet]
         public IActionResult GetNumberProperties([FromQuery] string number)
         {
             if (!int.TryParse(number, out int parsedNumber))

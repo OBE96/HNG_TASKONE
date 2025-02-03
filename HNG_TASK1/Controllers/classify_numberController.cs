@@ -36,10 +36,28 @@ namespace HNG_TASK1.Controllers
                 fun_fact = _numberService.GetFunFact(parsedNumber)
             };
 
-            if (_numberService.IsArmstrong(parsedNumber))
+            // Determine properties based on the new requirements
+            bool isArmstrong = _numberService.IsArmstrong(parsedNumber);
+            bool isOdd = parsedNumber % 2 != 0;
+
+            if (isArmstrong && isOdd)
+            {
                 response.properties.Add("armstrong");
-            if (parsedNumber % 2 != 0)
                 response.properties.Add("odd");
+            }
+            else if (isArmstrong && !isOdd)
+            {
+                response.properties.Add("armstrong");
+                response.properties.Add("even");
+            }
+            else if (!isArmstrong && isOdd)
+            {
+                response.properties.Add("odd");
+            }
+            else
+            {
+                response.properties.Add("even");
+            }
 
             return Ok(response);
         }

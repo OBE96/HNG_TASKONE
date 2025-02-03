@@ -42,7 +42,7 @@ Steps to Run the Project
 
 1.  Clone the Repository:
 >>bash   
-git clone https://github.com/OBE96/HNG_TASKONE.git 
+git clone https://github.com/OBE96/hnginternshiptask1.git
 cd my-repo
 
 2.  Build the Project:

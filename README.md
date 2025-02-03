@@ -1,11 +1,11 @@
 # HNG_TASK1
-# Number Properties API
-Description:
+## Number Properties API
+**Description:**
 
 
 A .NET Web API that takes a number as input and returns interesting mathematical properties about it, along with a fun fact.
 
-**Features**
+**Key Features**
 
 Mathematical Properties:
 
@@ -19,10 +19,10 @@ Mathematical Properties:
 
 - Calculates the sum of its digits.
 
---- Fun Fact:
+Fun Fact:
 
 - Provides a fun fact about the number, especially if it is an Armstrong number.
 
---- Error Handling:
+Error Handling:
 
 - Returns a 400 Bad Request response for invalid inputs (e.g., non-numeric values).

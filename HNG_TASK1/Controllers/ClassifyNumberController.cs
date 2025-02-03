@@ -18,7 +18,7 @@ namespace HNG_TASK1.Controllers
         [HttpGet]
         public async Task<IActionResult> GetNumberProperties([FromQuery] string number)
         {
-            if (string.IsNullOrEmpty(number))
+            if (!ModelState.IsValid)
             {
                 return BadRequest(new { error = true });
             }

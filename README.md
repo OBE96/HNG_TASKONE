@@ -42,7 +42,7 @@ Steps to Run the Project
 
 1.  Clone the Repository:
 >>bash   
-git clone https://github.com/OBE96/HNG_TASK_0.git      
+git clone https://github.com/OBE96/HNG_TASKONE.git 
 cd my-repo
 
 2.  Build the Project:
@@ -57,7 +57,7 @@ Start the API using the following command:
 dotnet run    
 4. Access the API:
 
-The API will be available at https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO .
+The API will be available at https://hng-taskone-tq2i.onrender.com/api/classify_number .
 
 You can test the API using a browser, Postman, or any HTTP client.
 
@@ -65,26 +65,32 @@ You can test the API using a browser, Postman, or any HTTP client.
 # API DOCUMENTATION
 
 Endpoint
-* https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO
+- https://hng-taskone-tq2i.onrender.com/api/classify_number?number=371
 
 Request
-* No request body or parameters are required.
+- No request body or parameters are required.
 
 Response
-* Status Code: 200 OK
+- Status Code: 200 OK
+
+**Example Usage**
+
+Valid Input
+- Send a GET request to https://hng-taskone-tq2i.onrender.com/api/classify_number?number=371
 
 Response Format:
 
 json
-![h1](https://github.com/user-attachments/assets/9b634503-c132-409f-abda-45d1684f1028)
+![11](https://github.com/user-attachments/assets/662bc7ee-fbb6-4bdc-b220-40cfcdb6ca7d)
 
-Example Usage
-1. Send a GET request to https://hng-task-0-xm9v.onrender.com/api/HNGTASKZERO
 
-2.You will receive the following response:
+Invalid Input
+- Send a GET request to https://hng-taskone-tq2i.onrender.com/api/classify_number?number=alphabet
 
+Response Format:
 json
-![h1](https://github.com/user-attachments/assets/072a62e6-f202-42ca-86f2-78db43a1c47b)
+![12](https://github.com/user-attachments/assets/75aca1a7-6c3e-4a71-8e37-a32c54fb3432)
+
 
 
 # BACKLINK
